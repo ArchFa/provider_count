@@ -10,7 +10,7 @@ st.set_page_config(page_title="Количество созданных зада�
 
 # %%
 st.title("Информация о провайдерах")
-st.write("Количество провайдеров с откликом, процент таких провайдеров.")
+st.write("Количество провайдеров с откликом, процент таких провайдеров")
 
 
 uploaded_file = st.file_uploader("Выбирете файл")
@@ -26,9 +26,9 @@ if uploaded_file is not None:
          ]
 
      # изменение типов
-     df['count_responds'] = df['count_responds'].astype(int)
-     df['count_pre_matched'] = df['count_pre_matched'].astype(int)
-     df['count_accepted'] = df['count_accepted'].astype(int)
+     df['count_responds'] = df['count_responds'].astype('int')
+     df['count_pre_matched'] = df['count_pre_matched'].astype('int')
+     df['count_accepted'] = df['count_accepted'].astype('int')
 
      # удвление тестовых номеров, которые начинаются на 520...
      df = df[~df.phone.str.contains('1000')]
