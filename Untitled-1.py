@@ -22,13 +22,12 @@ if uploaded_file is not None:
          'phone',
          'count_responds',
          'count_pre_matched',
-         'count_accepted'
-         ]
+         'count_accepted']
 
      # изменение типов
-     df['count_responds'] = df['count_responds'].astype('int')
-     df['count_pre_matched'] = df['count_pre_matched'].astype('int')
-     df['count_accepted'] = df['count_accepted'].astype('int')
+     df['count_responds'] = df['count_responds'].fillna(0).astype('int32')
+     df['count_pre_matched'] = df['count_pre_matched'].fillna(0).astype('int32')
+     df['count_accepted'] = df['count_accepted'].fillna(0).astype('int32')
 
      # удвление тестовых номеров, которые начинаются на 520...
      df = df[~df.phone.str.contains('1000')]
