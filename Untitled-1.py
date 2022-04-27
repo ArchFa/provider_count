@@ -19,7 +19,7 @@ use_example_file = st.checkbox(
 
 
 if use_example_file:
-    uploaded_file = "offers_referral_codes_2021_09_15__2022_03_15.csv"
+    uploaded_file = "user_responds_v2 (1).csv"
 
 
 if uploaded_file is not None:
